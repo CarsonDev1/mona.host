@@ -167,7 +167,7 @@ function Header() {
 									</div>
 								</div>
 								<ThemeSwitch />
-								<Link href='/checkout'>
+								<Link href='/cart'>
 									<div
 										className='header-cart relative cursor-pointer mr-4'
 										style={{ ['--bag-header' as any]: "url('/cart/bag-header-dark.svg')" }}
@@ -235,7 +235,7 @@ function Header() {
 						</div>
 						<div className='hidden xl:flex xl:items-center'>
 							<ThemeSwitch />
-							<Link href='/checkout'>
+							<Link href='/cart'>
 								<div
 									className='header-cart relative cursor-pointer'
 									style={{ ['--bag-header' as any]: "url('/cart/bag-header-dark.svg')" }}

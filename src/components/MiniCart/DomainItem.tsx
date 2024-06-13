@@ -106,8 +106,6 @@ const CartItemDetail = ({
 	priceMail: number;
 	handleSSLPriceChange: (isChecked: boolean) => void;
 }) => {
-	const [sslPrice, setSSLPrice] = useState(priceMail);
-
 	return (
 		<ThemeProvider theme={theme}>
 			<div
@@ -168,7 +166,7 @@ const CartItemDetail = ({
 								</span>
 							</div>
 							<span className='text-2xl text-sky-400 font-semibold'>
-								{sslPrice.toLocaleString()}đ/năm
+								{priceMail.toLocaleString()}đ/năm
 							</span>
 						</div>
 						<ul className='pl-12 list-disc text-xl'>
