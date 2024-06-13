@@ -1,0 +1,76 @@
+@import "@/styles/core/mixin.scss";
+
+.line-clamp-4 {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.link-view-more {
+	img {
+		filter: brightness(0);
+		transition: all 0.3s ease-in-out;
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+}
+
+.link-view-more:hover {
+	color: #1fc0f2;
+	transition: all 0.3s ease-in-out;
+	img {
+		filter: unset;
+		transform: rotate(-45deg);
+	}
+}
+
+.newspaper {
+	.card-wrapper {
+		gap: 2.4rem;
+
+		@include max(768px) {
+			gap: 1.6rem;
+		}
+	}
+
+	.newspaper-logo {
+		display: block;
+		max-width: max-content;
+		height: 2.2rem;
+		object-fit: contain;
+		object-position: left;
+	}
+
+	.scroller {
+		-webkit-mask-image: unset;
+		mask-image: unset;
+	}
+
+	&-item {
+		transition: 0.3s;
+
+		&:hover {
+			@include min(1201px) {
+				background: #fff;
+			}
+		}
+	}
+}
+
+[data-theme=dark] {
+	.newspaper .newspaper-logo img {
+		filter: brightness(0) invert(1);
+	}
+
+	.bgBox {
+		transition: 0.3s;
+	}
+}
+
+[data-theme=dark] .newspaper-item:hover {
+	@include min(1201px) {
+		box-shadow: 0 0 1rem -0.5rem rgba(255, 255, 255, 0.16), 0 0 2rem 0.5rem rgba(255, 255, 255, 0.36) inset;
+		background: rgba(255, 255, 255, 0.01);
+	}
+}

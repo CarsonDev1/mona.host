@@ -1,0 +1,180 @@
+@import '@/styles/core/mixin.scss';
+@import '@/styles/core/color.scss';
+
+.overflow-hidden .header nav,
+.header .margin-adjust {
+	margin-right: 7px;
+}
+.nav-text {
+	color: #011737;
+	transition: all 0.5s ease-in-out;
+	&:hover {
+		background: linear-gradient(0deg, #0eccff 4.36%, #1685fe 45.6%, #24adff 86.02%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		transition: all 0.5s ease-in-out;
+	}
+}
+.css-1uwgr7b-MuiTypography-root {
+	font-size: 1.6rem;
+}
+.css-xi4sms-MuiModal-root-MuiPopover-root-MuiMenu-root .MuiMenuItem-root {
+	padding: 12px 40px;
+}
+
+.header {
+	&-nav {
+		position: fixed;
+		z-index: 99;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: var(--bgHeader);
+		backdrop-filter: blur(2rem);
+	}
+
+	&-logo {
+		height: 3.2rem;
+	}
+
+	.menu {
+		&-item {
+			&.active {
+				.menu-link {
+					background: var(--gra, linear-gradient(0deg, #0eccff 4.36%, #1685fe 45.6%, #24adff 86.02%));
+					background-clip: text;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					font-weight: 700;
+				}
+			}
+		}
+		&-link {
+			padding: 1.2rem 2.4rem;
+			display: flex;
+			align-items: center;
+
+			.label {
+				font-size: 1.6rem;
+				transition: 0.3s;
+			}
+
+			&:hover {
+				@include min(1201px) {
+					color: $hostColor;
+				}
+			}
+		}
+	}
+
+	&-cart {
+		width: 4rem;
+		height: 4rem;
+		@include mid-flex();
+
+		.icon {
+			width: 2.4rem;
+			height: 2.4rem;
+			object-fit: contain;
+			object-position: center;
+		}
+	}
+
+	&-theme {
+		width: 4.8rem;
+		height: 4rem;
+		margin-right: 0.8rem;
+		padding-right: 0.8rem;
+		@include mid-flex();
+		cursor: pointer;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			width: 0.1rem;
+			height: 2.7rem;
+			background-color: var(--caretColor);
+		}
+	}
+
+	.icon-user {
+		width: 2.4rem;
+		height: 2.4rem;
+	}
+
+	&-bar {
+		background-color: var(--primaryColor);
+	}
+}
+
+.header-nav .icon-loading {
+	width: 5.6rem;
+	height: 4rem;
+}
+
+.header-theme svg > * {
+	color: var(--primaryColor);
+}
+
+[data-theme=dark] {
+	.header-logo img {
+    content: var(--hd-logo-less);
+  }
+
+	.header-cart img {
+    content: var(--bag-header);
+  }
+
+	.header-theme svg > * {
+		color: #fff;
+	}
+
+	.header-bar {
+		background-color: #fff;
+	}
+
+	.header .icon-user path {
+		fill: #fff;
+	}
+}
+
+@include max(576px) {
+	.header {
+		&-flex {
+			gap: 1.2rem;
+		}
+		&-user, &-theme, &-cart {
+			width: 2.2rem;
+			height: 2.2rem;
+		}
+	}
+
+	.header-user {
+		width: 2rem;
+		height: 2rem;
+		margin-right: 0.8rem;
+
+		.icon-user {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.header-theme {
+		width: 2.8rem;
+
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.header-nav .icon-loading {
+		width: 3.6rem;
+		height: 2rem;
+	}
+}

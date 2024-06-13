@@ -1,0 +1,15 @@
+input.no-autofill-bg:-webkit-autofill,
+input.no-autofill-bg:-webkit-autofill:hover,
+input.no-autofill-bg:-webkit-autofill:focus,
+input.no-autofill-bg:-webkit-autofill:active {
+	-webkit-text-fill-color: #000;
+	transition: background-color 5000s ease-in-out 0s;
+	box-shadow: 0 0 0px 1000px white inset;
+}
+
+.recaptcha {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+}

@@ -1,0 +1,282 @@
+@import './color.scss';
+
+:root {
+	--primaryColor: #1ec0f2;
+	--bgBody: #FBFBFC;
+	--textBody: #011737;
+	--caretColor: #97B2D9;
+	--bgHeader: rgba(255, 255, 255, 0.60);
+	--bgPageBefore: linear-gradient(90deg, #D5EEF6 0%, #EFEFFC 19.5%, #EAEEFF 35%, #EFF2FF 47.5%, #ECF0FF 65.5%, #DBEBFF 81%, #FCECFF 97.5%);
+	--bgPageAfter: linear-gradient(183deg, rgba(251, 251, 251, 0.00) 2.36%, #FBFBFC 220.5%);
+
+	--textBtn: var(--primaryColor);
+	--bgBtnPri: linear-gradient(264deg, #139EFE -27.24%, #10B5FE 47.8%, #139EFE 122.84%);
+	--textBtnPri: #fff;
+	--arrowBtn: #fff;
+	--txtHl: linear-gradient(0deg, #0ECCFF 4.36%, #1685FE 45.6%, #24ADFF 86.02%);
+
+	--bgBox: linear-gradient(180deg, #FFF 0%, #FBFBFC 45.5%);
+	--shadowBox: 0px -2rem 4.36rem -3rem rgba(63, 75, 118, 0.07);
+
+	--bgLine: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(24, 114, 228, 0.08) 5%, rgba(20, 95, 190, 0.08) 51.5%, rgba(24, 114, 228, 0.08) 95%, rgba(255, 255, 255, 0.08) 100%);
+	--bgDot: #fff;
+	--bgDotBottom: rgba(14, 63, 126, 0.10);
+	--shadowDot: 0px 0px 0px 1px rgba(14, 63, 126, 0.06), 0px 1px 1px -0.5px rgba(42, 51, 70, 0.08), 0px 2px 2px -1px rgba(42, 51, 70, 0.08);
+
+	--bgPopper: #fff;
+	--bgPopperHover: #EAEAEA;
+}
+
+[data-theme=dark] {
+	--bgBody: #000C1E;
+	--textBody: #fff;
+	--caretColor: #fff;
+	--bgHeader: rgba(255, 255, 255, 0.03);
+	--bgPageBefore: linear-gradient(90deg, #000A18 0%, #011737 0.01%, #001433 29%, #00183E 51.5%, #001B46 69.5%, #001433 100%);
+	--bgPageAfter: linear-gradient(181deg, rgba(2, 23, 55, 0.00) 0.45%, #000C1E 77.11%);
+
+	--textBtn: #fff;
+	--bgBtnPri: #fff;
+	--arrowBtn: var(--primaryColor);
+	--txtHl: linear-gradient(264deg, #139EFE -27.24%, #10B5FE 47.8%, #139EFE 122.84%);
+
+	--bgBox: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, rgba(0, 0, 0, 0.01) 100%);
+	--shadowBox: 0px 13px 20.9px 2px rgba(255, 255, 255, 0.36) inset;
+
+	--bgLine: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.08) 5%, rgba(255, 255, 255, 0.08) 51.5%, rgba(255, 255, 255, 0.08) 95%, rgba(255, 255, 255, 0.08) 100%);
+	--bgDot: rgba(255, 255, 255, 0.08);
+	--bgDotBottom: var(--bgBody);
+	--shadowDot: 0px 0px 5px 1px rgba(255, 255, 255, 0.22) inset, 0px 0px 8.8px 4px rgba(255, 255, 255, 0.04) inset, 0px 0px 30px 10px rgba(255, 255, 255, 0.10) inset;
+	
+	--bgPopper: #1E1E1E;
+	--bgPopperHover: #353535;
+
+	.banner .textContainer .logo-host {
+		img {
+			content: var(--logo-img);
+		}
+	}
+
+	.solution-logo img {
+		content: var(--banner-img);
+	}
+}
+
+.dark {
+	--bgBody: #000C1E;
+	--textBody: #fff;
+	--caretColor: #fff;
+	--bgHeader: rgba(255, 255, 255, 0.03);
+	--bgPageBefore: linear-gradient(90deg, #000A18 0%, #011737 0.01%, #001433 29%, #00183E 51.5%, #001B46 69.5%, #001433 100%);
+	--bgPageAfter: linear-gradient(181deg, rgba(2, 23, 55, 0.00) 0.45%, #000C1E 77.11%);
+
+	--textBtn: #fff;
+	--bgBtnPri: #fff;
+	--arrowBtn: var(--primaryColor);
+	--txtHl: linear-gradient(264deg, #139EFE -27.24%, #10B5FE 47.8%, #139EFE 122.84%);
+
+	--bgBox: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, rgba(0, 0, 0, 0.01) 100%);
+	--shadowBox: 0px 13px 20.9px 2px rgba(255, 255, 255, 0.36) inset;
+
+	--bgLine: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.08) 5%, rgba(255, 255, 255, 0.08) 51.5%, rgba(255, 255, 255, 0.08) 95%, rgba(255, 255, 255, 0.08) 100%);
+	--bgDot: rgba(255, 255, 255, 0.08);
+	--shadowDot: 0px 0px 5px 1px rgba(255, 255, 255, 0.22) inset, 0px 0px 8.8px 4px rgba(255, 255, 255, 0.04) inset, 0px 0px 30px 10px rgba(255, 255, 255, 0.10) inset;
+
+	.banner .textContainer .logo-host {
+		img {
+			content: var(--logo-img);
+		}
+	}
+
+	.solution-logo img {
+		content: var(--banner-img);
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+
+	// scroll-behavior: smooth;
+	@media (min-width: 2000px) {
+		font-size: 80%;
+	}
+
+	@media (min-width: 2500px) {
+		font-size: 100%;
+	}
+	@include max(2000px) {
+		scroll-behavior: smooth;
+	}
+
+	@media (max-width: 1580px) {
+		font-size: 8px;
+	}
+
+	@media (max-width: 1200px) {
+		font-size: 10px;
+	}
+}
+
+body {
+	background-color: var(--bgBody);
+	color: var(--textBody);
+	font-family: 'Inter', 'sans-serif';
+	font-size: 1.6rem;
+	line-height: 1.5;
+	overflow: hidden auto;
+	position: relative;
+	-webkit-tap-highlight-color: transparent;
+
+	@media (max-width: 1200px) {
+		font-size: 1.6rem;
+	}
+}
+
+// .bg-background {
+//   background-color: hsl(var(--background));
+// }
+
+/* width */
+::-webkit-scrollbar {
+	width: 7px;
+
+	@media (max-width: 1200px) {
+		width: 3px;
+	}
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+	background: #c3c3c3;
+	border-radius: 2rem;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button,
+select,
+input,
+textarea {
+	font-family: inherit;
+	font-size: 1.4rem;
+	line-height: 1.2;
+	padding: 0;
+	border: none;
+	outline: none;
+	resize: none;
+	vertical-align: middle;
+}
+
+.no-scroll {
+	touch-action: none;
+	-webkit-overflow-scrolling: none;
+	overflow: hidden;
+	overscroll-behavior: none;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 146.4rem;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 3.2rem;
+	@media (min-width: 1921px) {
+		max-width: 188rem;
+	}
+	@media (max-width: 1727px) {
+		max-width: 126.4rem;
+	}
+	@media (max-width: 1200px) {
+		max-width: 100%;
+	}
+	@media (max-width: 576px) {
+		padding: 0 1.6rem;
+	}
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.hide-mb {
+	@include max(576px) {
+		display: none;
+	}
+}
+
+.show-mb {
+	display: none;
+	@include max(576px) {
+		display: block;
+	}
+}
+
+.desc-dot {
+	position: relative;
+	padding-left: 2rem;
+	margin-bottom: 0.8rem;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0.8rem;
+		left: 0;
+		width: 0.8rem;
+		height: 0.8rem;
+		border-radius: 50%;
+		background-color: $hostColor;
+	}
+}
+
+.bgBox {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--bgBox);
+	box-shadow: var(--shadowBox);
+	border-radius: inherit;
+}
+
+[data-theme=dark] {
+	.bgBox {
+		background: unset;
+		box-shadow: unset;
+		-webkit-mask-image: linear-gradient(180deg, #000C1E 0%, rgba(0, 12, 30, 0.00) 74.76%);
+		mask-image: linear-gradient(180deg, #000C1E 0%, rgba(0, 12, 30, 0.00) 74.76%);
+		-webkit-mask-size: 100% 100%;
+		mask-size: 100% 100%;
+	
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: inherit;
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 0%, rgba(0, 0, 0, 0.01) 100%);
+	
+			/* pick */
+			box-shadow: 0 0 2rem -0.5rem rgba(255, 255, 255, 0.16), 0 0 2rem 0.5rem rgba(255, 255, 255, 0.36) inset;
+		}
+	}
+} 

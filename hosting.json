@@ -1,0 +1,851 @@
+{
+	"MONA Business 10": {
+		"price": 550000,
+		"pricing": {
+			"12": 550000,
+			"24": 495000,
+			"36": 467500,
+			"60": 385000
+		},
+		"features": [
+			{
+				"id": 1,
+				"description": "35 GB dung lượng SSD NVMe",
+				"tooltip": "35 GB dung luong",
+				"feature_tooltip": "Hệ thống còn sử dụng ổ cứng NVMe PCIe 4.0 với tốc độ đọc ghi nhanh nhất nhì thị trường với tốc độ lên tới 6GB/s, nhanh gấp 12 lần so với SSD truyền thống"
+			},
+			{
+				"id": 2,
+				"description": "30 nhân CPU"
+			},
+			{
+				"id": 3,
+				"description": "64 GB RAM"
+			},
+			{
+				"id": 4,
+				"description": "200 Mbps băng thông"
+			},
+			{
+				"id": 5,
+				"description": "20 truy cập đồng thời"
+			},
+			{
+				"id": 6,
+				"description": "Sao lưu dữ liệu hàng ngày (trị giá 789.456đ)"
+			},
+			{
+				"id": 7,
+				"description": "Tối ưu Wordpress Miễn Phí"
+			},
+			{
+				"id": 8,
+				"description": "Miễn Phí tích hợp hệ thống Monitoring toàn diện"
+			}
+		],
+		"feature_tooltip": "Khi sử dụng dịch vụ của chúng tôi bạn có thể yên tâm dùng thử. Nếu xảy ra bất cứ sự cố hoặc không hài lòng nào bạn có thể được hoàn lại phí hosting của mình trong vòng 7 ngày kể từ ngày đăng ký",
+		"securitys": [
+			{
+				"id": 1,
+				"description": "Bảo vệ chống DDoS Toàn Diện"
+			},
+			{
+				"id": 2,
+				"description": "Nameservers bảo vệ bằng Cloudflare"
+			},
+			{
+				"id": 3,
+				"description": "Bảo mật Email Gateway"
+			}
+		],
+		"services": [
+			{
+				"id": 1,
+				"description": "7 ngày đảm bảo hoàn phí"
+			},
+			{
+				"id": 2,
+				"description": "Hỗ trợ 24/7/365"
+			},
+			{
+				"id": 3,
+				"description": "Đảm bảo 99,9% thời gian hoạt động"
+			},
+			{
+				"id": 4,
+				"description": "Hỗ trợ trực tiếp bởi Senior System Engineer"
+			},
+			{
+				"id": 5,
+				"description": "Miễn Phí chuyển dữ liệu"
+			},
+			{
+				"id": 6,
+				"description": "Hỗ trợ setup ban đầu Miễn Phí"
+			}
+		],
+		"technical_description": [
+			{
+				"id": 1,
+				"description": "Tập tin và thư mục (Inodes) không giới hạn"
+			},
+			{
+				"id": 2,
+				"description": "Dữ liệu truyền tải không giới hạn"
+			},
+			{
+				"id": 3,
+				"description": "200 luồng xử lý đồng thời"
+			},
+			{
+				"id": 4,
+				"description": "Không giới hạn tài khoản FTP"
+			},
+			{
+				"id": 5,
+				"description": "Tối đa 100 MySQL user connections"
+			},
+			{
+				"id": 6,
+				"description": "MySQL Database: 3"
+			},
+			{
+				"id": 7,
+				"description": "Số lượng tên miền tối đa: 3"
+			},
+			{
+				"id": 8,
+				"description": "Hỗ trợ chuyển đổi source code từ hosting cũ: 1 website"
+			},
+			{
+				"id": 9,
+				"description": "Tuỳ chỉnh phiên bản PHP"
+			},
+			{
+				"id": 10,
+				"description": "Tích hợp bảng điều khiển cPanel"
+			},
+			{
+				"id": 11,
+				"description": "Hỗ trợ Litespeed Webserver"
+			},
+			{
+				"id": 12,
+				"description": "Hỗ trợ truy cập SSH"
+			},
+			{
+				"id": 13,
+				"description": "Hỗ trợ Redis Cache"
+			},
+			{
+				"id": 14,
+				"description": "Địa chỉ email: 10"
+			}
+		]
+	},
+	"MONA Business 20": {
+		"price": 750000,
+		"pricing": {
+			"12": 750000,
+			"24": 750000,
+			"36": 637500,
+			"60": 525000
+		},
+		"features": [
+			{
+				"id": 1,
+				"description": "35 GB dung lượng SSD NVMe"
+			},
+			{
+				"id": 2,
+				"description": "30 nhân CPU"
+			},
+			{
+				"id": 3,
+				"description": "64 GB RAM"
+			},
+			{
+				"id": 4,
+				"description": "200 Mbps băng thông"
+			},
+			{
+				"id": 5,
+				"description": "20 truy cập đồng thời"
+			},
+			{
+				"id": 6,
+				"description": "Sao lưu dữ liệu hàng ngày (trị giá 789.456đ)"
+			},
+			{
+				"id": 7,
+				"description": "Tối ưu Wordpress Miễn Phí"
+			},
+			{
+				"id": 8,
+				"description": "Miễn Phí tích hợp hệ thống Monitoring toàn diện"
+			}
+		],
+		"securitys": [
+			{
+				"id": 1,
+				"description": "Bảo vệ chống DDoS Toàn Diện"
+			},
+			{
+				"id": 2,
+				"description": "Nameservers bảo vệ bằng Cloudflare"
+			},
+			{
+				"id": 3,
+				"description": "Bảo mật Email Gateway"
+			}
+		],
+		"services": [
+			{
+				"id": 1,
+				"description": "7 ngày đảm bảo hoàn phí"
+			},
+			{
+				"id": 2,
+				"description": "Hỗ trợ 24/7/365"
+			},
+			{
+				"id": 3,
+				"description": "Đảm bảo 99,9% thời gian hoạt động"
+			},
+			{
+				"id": 4,
+				"description": "Hỗ trợ trực tiếp bởi Senior System Engineer"
+			},
+			{
+				"id": 5,
+				"description": "Miễn Phí chuyển dữ liệu"
+			},
+			{
+				"id": 6,
+				"description": "Hỗ trợ setup ban đầu Miễn Phí"
+			}
+		],
+		"technical_description": [
+			{
+				"id": 1,
+				"description": "Tập tin và thư mục (Inodes) không giới hạn"
+			},
+			{
+				"id": 2,
+				"description": "Dữ liệu truyền tải không giới hạn"
+			},
+			{
+				"id": 3,
+				"description": "200 luồng xử lý đồng thời"
+			},
+			{
+				"id": 4,
+				"description": "Không giới hạn tài khoản FTP"
+			},
+			{
+				"id": 5,
+				"description": "Tối đa 100 MySQL user connections"
+			},
+			{
+				"id": 6,
+				"description": "MySQL Database: 3"
+			},
+			{
+				"id": 7,
+				"description": "Số lượng tên miền tối đa: 3"
+			},
+			{
+				"id": 8,
+				"description": "Hỗ trợ chuyển đổi source code từ hosting cũ: 1 website"
+			},
+			{
+				"id": 9,
+				"description": "Tuỳ chỉnh phiên bản PHP"
+			},
+			{
+				"id": 10,
+				"description": "Tích hợp bảng điều khiển cPanel"
+			},
+			{
+				"id": 11,
+				"description": "Hỗ trợ Litespeed Webserver"
+			},
+			{
+				"id": 12,
+				"description": "Hỗ trợ truy cập SSH"
+			},
+			{
+				"id": 13,
+				"description": "Hỗ trợ Redis Cache"
+			},
+			{
+				"id": 14,
+				"description": "Địa chỉ email: 10"
+			}
+		]
+	},
+	"MONA Business 30": {
+		"price": 950000,
+		"pricing": {
+			"12": 950000,
+			"24": 950000,
+			"36": 807500,
+			"60": 665000
+		},
+		"features": [
+			{
+				"id": 1,
+				"description": "35 GB dung lượng SSD NVMe"
+			},
+			{
+				"id": 2,
+				"description": "30 nhân CPU"
+			},
+			{
+				"id": 3,
+				"description": "64 GB RAM"
+			},
+			{
+				"id": 4,
+				"description": "200 Mbps băng thông"
+			},
+			{
+				"id": 5,
+				"description": "20 truy cập đồng thời"
+			},
+			{
+				"id": 6,
+				"description": "Sao lưu dữ liệu hàng ngày (trị giá 789.456đ)"
+			},
+			{
+				"id": 7,
+				"description": "Tối ưu Wordpress Miễn Phí"
+			},
+			{
+				"id": 8,
+				"description": "Miễn Phí tích hợp hệ thống Monitoring toàn diện"
+			}
+		],
+		"securitys": [
+			{
+				"id": 1,
+				"description": "Bảo vệ chống DDoS Toàn Diện"
+			},
+			{
+				"id": 2,
+				"description": "Nameservers bảo vệ bằng Cloudflare"
+			},
+			{
+				"id": 3,
+				"description": "Bảo mật Email Gateway"
+			}
+		],
+		"services": [
+			{
+				"id": 1,
+				"description": "7 ngày đảm bảo hoàn phí"
+			},
+			{
+				"id": 2,
+				"description": "Hỗ trợ 24/7/365"
+			},
+			{
+				"id": 3,
+				"description": "Đảm bảo 99,9% thời gian hoạt động"
+			},
+			{
+				"id": 4,
+				"description": "Hỗ trợ trực tiếp bởi Senior System Engineer"
+			},
+			{
+				"id": 5,
+				"description": "Miễn Phí chuyển dữ liệu"
+			},
+			{
+				"id": 6,
+				"description": "Hỗ trợ setup ban đầu Miễn Phí"
+			}
+		],
+		"technical_description": [
+			{
+				"id": 1,
+				"description": "Tập tin và thư mục (Inodes) không giới hạn"
+			},
+			{
+				"id": 2,
+				"description": "Dữ liệu truyền tải không giới hạn"
+			},
+			{
+				"id": 3,
+				"description": "200 luồng xử lý đồng thời"
+			},
+			{
+				"id": 4,
+				"description": "Không giới hạn tài khoản FTP"
+			},
+			{
+				"id": 5,
+				"description": "Tối đa 100 MySQL user connections"
+			},
+			{
+				"id": 6,
+				"description": "MySQL Database: 3"
+			},
+			{
+				"id": 7,
+				"description": "Số lượng tên miền tối đa: 3"
+			},
+			{
+				"id": 8,
+				"description": "Hỗ trợ chuyển đổi source code từ hosting cũ: 1 website"
+			},
+			{
+				"id": 9,
+				"description": "Tuỳ chỉnh phiên bản PHP"
+			},
+			{
+				"id": 10,
+				"description": "Tích hợp bảng điều khiển cPanel"
+			},
+			{
+				"id": 11,
+				"description": "Hỗ trợ Litespeed Webserver"
+			},
+			{
+				"id": 12,
+				"description": "Hỗ trợ truy cập SSH"
+			},
+			{
+				"id": 13,
+				"description": "Hỗ trợ Redis Cache"
+			},
+			{
+				"id": 14,
+				"description": "Địa chỉ email: 10"
+			}
+		]
+	},
+	"MONA Business 50": {
+		"price": 1200000,
+		"pricing": {
+			"12": 1200000,
+			"24": 1200000,
+			"36": 1020000,
+			"60": 840000
+		},
+		"features": [
+			{
+				"id": 1,
+				"description": "35 GB dung lượng SSD NVMe"
+			},
+			{
+				"id": 2,
+				"description": "30 nhân CPU"
+			},
+			{
+				"id": 3,
+				"description": "64 GB RAM"
+			},
+			{
+				"id": 4,
+				"description": "200 Mbps băng thông"
+			},
+			{
+				"id": 5,
+				"description": "20 truy cập đồng thời"
+			},
+			{
+				"id": 6,
+				"description": "Sao lưu dữ liệu hàng ngày (trị giá 789.456đ)"
+			},
+			{
+				"id": 7,
+				"description": "Tối ưu Wordpress Miễn Phí"
+			},
+			{
+				"id": 8,
+				"description": "Miễn Phí tích hợp hệ thống Monitoring toàn diện"
+			}
+		],
+		"securitys": [
+			{
+				"id": 1,
+				"description": "Bảo vệ chống DDoS Toàn Diện"
+			},
+			{
+				"id": 2,
+				"description": "Nameservers bảo vệ bằng Cloudflare"
+			},
+			{
+				"id": 3,
+				"description": "Bảo mật Email Gateway"
+			}
+		],
+		"services": [
+			{
+				"id": 1,
+				"description": "7 ngày đảm bảo hoàn phí"
+			},
+			{
+				"id": 2,
+				"description": "Hỗ trợ 24/7/365"
+			},
+			{
+				"id": 3,
+				"description": "Đảm bảo 99,9% thời gian hoạt động"
+			},
+			{
+				"id": 4,
+				"description": "Hỗ trợ trực tiếp bởi Senior System Engineer"
+			},
+			{
+				"id": 5,
+				"description": "Miễn Phí chuyển dữ liệu"
+			},
+			{
+				"id": 6,
+				"description": "Hỗ trợ setup ban đầu Miễn Phí"
+			}
+		],
+		"technical_description": [
+			{
+				"id": 1,
+				"description": "Tập tin và thư mục (Inodes) không giới hạn"
+			},
+			{
+				"id": 2,
+				"description": "Dữ liệu truyền tải không giới hạn"
+			},
+			{
+				"id": 3,
+				"description": "200 luồng xử lý đồng thời"
+			},
+			{
+				"id": 4,
+				"description": "Không giới hạn tài khoản FTP"
+			},
+			{
+				"id": 5,
+				"description": "Tối đa 100 MySQL user connections"
+			},
+			{
+				"id": 6,
+				"description": "MySQL Database: 3"
+			},
+			{
+				"id": 7,
+				"description": "Số lượng tên miền tối đa: 3"
+			},
+			{
+				"id": 8,
+				"description": "Hỗ trợ chuyển đổi source code từ hosting cũ: 1 website"
+			},
+			{
+				"id": 9,
+				"description": "Tuỳ chỉnh phiên bản PHP"
+			},
+			{
+				"id": 10,
+				"description": "Tích hợp bảng điều khiển cPanel"
+			},
+			{
+				"id": 11,
+				"description": "Hỗ trợ Litespeed Webserver"
+			},
+			{
+				"id": 12,
+				"description": "Hỗ trợ truy cập SSH"
+			},
+			{
+				"id": 13,
+				"description": "Hỗ trợ Redis Cache"
+			},
+			{
+				"id": 14,
+				"description": "Địa chỉ email: 10"
+			}
+		]
+	},
+	"MONA Business 80": {
+		"price": 1450000,
+		"pricing": {
+			"12": 1450000,
+			"24": 1450000,
+			"36": 1232500,
+			"60": 1015000
+		},
+		"features": [
+			{
+				"id": 1,
+				"description": "35 GB dung lượng SSD NVMe"
+			},
+			{
+				"id": 2,
+				"description": "30 nhân CPU"
+			},
+			{
+				"id": 3,
+				"description": "64 GB RAM"
+			},
+			{
+				"id": 4,
+				"description": "200 Mbps băng thông"
+			},
+			{
+				"id": 5,
+				"description": "20 truy cập đồng thời"
+			},
+			{
+				"id": 6,
+				"description": "Sao lưu dữ liệu hàng ngày (trị giá 789.456đ)"
+			},
+			{
+				"id": 7,
+				"description": "Tối ưu Wordpress Miễn Phí"
+			},
+			{
+				"id": 8,
+				"description": "Miễn Phí tích hợp hệ thống Monitoring toàn diện"
+			}
+		],
+		"securitys": [
+			{
+				"id": 1,
+				"description": "Bảo vệ chống DDoS Toàn Diện"
+			},
+			{
+				"id": 2,
+				"description": "Nameservers bảo vệ bằng Cloudflare"
+			},
+			{
+				"id": 3,
+				"description": "Bảo mật Email Gateway"
+			}
+		],
+		"services": [
+			{
+				"id": 1,
+				"description": "7 ngày đảm bảo hoàn phí"
+			},
+			{
+				"id": 2,
+				"description": "Hỗ trợ 24/7/365"
+			},
+			{
+				"id": 3,
+				"description": "Đảm bảo 99,9% thời gian hoạt động"
+			},
+			{
+				"id": 4,
+				"description": "Hỗ trợ trực tiếp bởi Senior System Engineer"
+			},
+			{
+				"id": 5,
+				"description": "Miễn Phí chuyển dữ liệu"
+			},
+			{
+				"id": 6,
+				"description": "Hỗ trợ setup ban đầu Miễn Phí"
+			}
+		],
+		"technical_description": [
+			{
+				"id": 1,
+				"description": "Tập tin và thư mục (Inodes) không giới hạn"
+			},
+			{
+				"id": 2,
+				"description": "Dữ liệu truyền tải không giới hạn"
+			},
+			{
+				"id": 3,
+				"description": "200 luồng xử lý đồng thời"
+			},
+			{
+				"id": 4,
+				"description": "Không giới hạn tài khoản FTP"
+			},
+			{
+				"id": 5,
+				"description": "Tối đa 100 MySQL user connections"
+			},
+			{
+				"id": 6,
+				"description": "MySQL Database: 3"
+			},
+			{
+				"id": 7,
+				"description": "Số lượng tên miền tối đa: 3"
+			},
+			{
+				"id": 8,
+				"description": "Hỗ trợ chuyển đổi source code từ hosting cũ: 1 website"
+			},
+			{
+				"id": 9,
+				"description": "Tuỳ chỉnh phiên bản PHP"
+			},
+			{
+				"id": 10,
+				"description": "Tích hợp bảng điều khiển cPanel"
+			},
+			{
+				"id": 11,
+				"description": "Hỗ trợ Litespeed Webserver"
+			},
+			{
+				"id": 12,
+				"description": "Hỗ trợ truy cập SSH"
+			},
+			{
+				"id": 13,
+				"description": "Hỗ trợ Redis Cache"
+			},
+			{
+				"id": 14,
+				"description": "Địa chỉ email: 10"
+			}
+		]
+	},
+	"MONA Business 100": {
+		"price": 1800000,
+		"pricing": {
+			"12": 1800000,
+			"24": 1800000,
+			"36": 1530000,
+			"60": 1260000
+		},
+		"features": [
+			{
+				"id": 1,
+				"description": "35 GB dung lượng SSD NVMe"
+			},
+			{
+				"id": 2,
+				"description": "30 nhân CPU"
+			},
+			{
+				"id": 3,
+				"description": "64 GB RAM"
+			},
+			{
+				"id": 4,
+				"description": "200 Mbps băng thông"
+			},
+			{
+				"id": 5,
+				"description": "20 truy cập đồng thời"
+			},
+			{
+				"id": 6,
+				"description": "Sao lưu dữ liệu hàng ngày (trị giá 789.456đ)"
+			},
+			{
+				"id": 7,
+				"description": "Tối ưu Wordpress Miễn Phí"
+			},
+			{
+				"id": 8,
+				"description": "Miễn Phí tích hợp hệ thống Monitoring toàn diện"
+			}
+		],
+		"securitys": [
+			{
+				"id": 1,
+				"description": "Bảo vệ chống DDoS Toàn Diện"
+			},
+			{
+				"id": 2,
+				"description": "Nameservers bảo vệ bằng Cloudflare"
+			},
+			{
+				"id": 3,
+				"description": "Bảo mật Email Gateway"
+			}
+		],
+		"services": [
+			{
+				"id": 1,
+				"description": "7 ngày đảm bảo hoàn phí"
+			},
+			{
+				"id": 2,
+				"description": "Hỗ trợ 24/7/365"
+			},
+			{
+				"id": 3,
+				"description": "Đảm bảo 99,9% thời gian hoạt động"
+			},
+			{
+				"id": 4,
+				"description": "Hỗ trợ trực tiếp bởi Senior System Engineer"
+			},
+			{
+				"id": 5,
+				"description": "Miễn Phí chuyển dữ liệu"
+			},
+			{
+				"id": 6,
+				"description": "Hỗ trợ setup ban đầu Miễn Phí"
+			}
+		],
+		"technical_description": [
+			{
+				"id": 1,
+				"description": "Tập tin và thư mục (Inodes) không giới hạn"
+			},
+			{
+				"id": 2,
+				"description": "Dữ liệu truyền tải không giới hạn"
+			},
+			{
+				"id": 3,
+				"description": "200 luồng xử lý đồng thời"
+			},
+			{
+				"id": 4,
+				"description": "Không giới hạn tài khoản FTP"
+			},
+			{
+				"id": 5,
+				"description": "Tối đa 100 MySQL user connections"
+			},
+			{
+				"id": 6,
+				"description": "MySQL Database: 3"
+			},
+			{
+				"id": 7,
+				"description": "Số lượng tên miền tối đa: 3"
+			},
+			{
+				"id": 8,
+				"description": "Hỗ trợ chuyển đổi source code từ hosting cũ: 1 website"
+			},
+			{
+				"id": 9,
+				"description": "Tuỳ chỉnh phiên bản PHP"
+			},
+			{
+				"id": 10,
+				"description": "Tích hợp bảng điều khiển cPanel"
+			},
+			{
+				"id": 11,
+				"description": "Hỗ trợ Litespeed Webserver"
+			},
+			{
+				"id": 12,
+				"description": "Hỗ trợ truy cập SSH"
+			},
+			{
+				"id": 13,
+				"description": "Hỗ trợ Redis Cache"
+			},
+			{
+				"id": 14,
+				"description": "Địa chỉ email: 10"
+			}
+		]
+	}
+}

@@ -1,0 +1,396 @@
+.mona-ch {
+  padding-top: 17rem;
+
+  &-cloud {
+    width: calc(100% * (1.8 / 10) + 6rem);
+    padding: 0 3rem;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -59%);
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      top: 55%;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      background-color: $hostColor700;
+    }
+    
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  .box {
+    border-radius: 2.4rem;
+    border: 0.3rem solid $hostColor700;
+    padding: 6rem;
+    padding-top: 7.2rem;
+    width: calc(100% * (10 / 12) + 6.4rem);
+
+    @include max(1727px) {
+      padding: 4.2rem;
+      padding-top: 7.2rem;
+    }
+    
+    .title {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &-ab {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 2.4rem;
+
+    @include max(1727px) {
+      gap: 2rem;
+    }
+
+    .item {
+      display: flex;
+      gap: 1.2rem;
+      width: calc(100% / 4);
+    }
+
+    .icon {
+      width: 4.5rem;
+      height: 4.5rem;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.mona-ch-card {
+  .card-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2.4rem;
+  }
+
+  .card-item {
+    border-radius: 0.8rem;
+    border: 0.1rem solid $hostColor700;
+    overflow: hidden;
+    width: calc(100% / 3 - 4.4rem);
+
+    @include max(1727px) {
+      width: calc(100% / 3 - 1.6rem);
+    }
+  }
+
+  .card-head {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    background: linear-gradient(58deg, $hostColor -12.5%, rgba(30, 192, 242, 0.10) 78.67%), $hostColor;
+    color: #fff;
+    min-height: 7.2rem;
+
+    .icon {
+      width: 3.5rem;
+
+      @include max(1727px) {
+        width: 2.8rem;
+      }
+    }
+  }
+
+  .card-body {
+    padding: 0.8rem;
+    padding-bottom: 4.8rem;
+
+    .item {
+      padding: 0 0.8rem;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.mona-security {
+  margin: 2.4rem 0;
+  padding: 2rem 5rem;
+  background-color: $hostColor50;
+  border-radius: 0.8rem;
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-item {
+    &:not(:last-child) {
+      padding-right: 3rem;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        transform: translate(-0.3rem, -0.4rem);
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background-color: $textColor;
+      }
+    }
+  }
+}
+
+.the-whole {
+  margin: 2.4rem 0;
+  --sizeIcon: 6.5rem;
+
+  @include max(992px) {
+    --sizeIcon: 3.2rem;
+  }
+
+  &-box {
+    padding: 2.4rem;
+    padding-bottom: 6rem;
+    border-radius: 0.8rem;
+    background: radial-gradient(37.81% 241.29% at 50.05% 241.29%, #00EAFF 56.49%, #1EC0F2 100%);
+    color: #fff;
+    position: relative;
+
+    .title {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &-cir {
+    @include mid();
+    width: calc(100% + 4.8rem);
+    mix-blend-mode: plus-lighter;
+    pointer-events: none;
+  }
+
+  &-global {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    mix-blend-mode: lighten;
+  }
+
+  &-list {
+    width: calc(100% * (8 / 12));
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.2rem;
+    }
+  
+    .icon {
+      width: var(--sizeIcon);
+      height: var(--sizeIcon);
+    }
+
+    .name {
+      font-weight: 600;
+    }
+  }
+}
+
+.the-partner {
+  &-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.2rem;
+    padding: 0 2.4rem;
+  }
+
+  &-item {
+    height: 6.4rem;
+    max-width: max-content;
+    width: calc(100% / 4 - 1.2rem);
+    min-width: calc(100% / 5.5 - 1.2rem);
+    display: flex;
+    align-items: center;
+  }
+}
+
+.the-certifications {
+  margin-top: 2.4rem;
+  padding-top: 2.4rem;
+  border-top: 0.1rem solid $hostColor;
+  display: flex;
+  justify-content: center;
+
+  .label {
+    margin-right: 1.8rem;
+  }
+
+  .certifications-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .certifications-item {
+    position: relative;
+    padding-right: 4.2rem;
+    position: relative;
+
+    &:not(:last-child) {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background-color: $textColor;
+      }
+    }
+  }
+}
+
+@include max(1200px) {
+  .mona-ch {
+    padding-top: 12rem;
+  }
+
+  .mona-ch .box {
+    width: 100%;
+  }
+
+  .mona-ch-ab .icon {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .mona-ch-ab .name {
+    font-size: 1.6rem;
+  }
+}
+
+@include max(992px) {
+  .mona-ch .box {
+    padding: 2.4rem;
+    padding-top: 5.2rem;
+    border-radius: 2rem;
+    border-width: 0.2rem;
+  }
+}
+
+@include max(850px) {
+  .mona-ch-cloud {
+    transform: translate(-50%, -63%);
+  }
+
+  .mona-ch-ab {
+    flex-wrap: wrap;
+  }
+
+  .mona-ch-ab .item {
+    width: calc(50% - 1rem);
+  }
+
+  .mona-ch-card .card-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .mona-ch-card .card-item {
+    width: calc(50% - 1.2rem);
+  }
+
+  .mona-ch-card .card-head {
+    min-height: 6.2rem;
+  }
+
+  .mona-security {
+    padding: 2rem;
+  }
+}
+
+@include max(576px) {
+  .mona-ch {
+    padding-top: 8rem;
+  }
+
+  .mona-ch .box {
+    padding: 1.6rem;
+    padding-top: 4.2rem;
+  }
+
+  .mona-ch-cloud {
+    padding: 0 2rem;
+    transform: translate(-50%, -62%);
+  }
+
+  .mona-ch-cloud::before, .mona-ch-cloud::after {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .mona-ch-ab .item {
+    width: calc(100% - 1.2rem);
+    align-items: center;
+  }
+
+  .mona-ch-ab .icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .mona-ch-card .card-list {
+    gap: 1.6rem;
+  }
+
+  .mona-ch-card .card-item {
+    width: 100%;
+  }
+
+  .mona-ch-card .card-body {
+    padding-bottom: 0.8rem;
+  }
+
+  .the-whole-box {
+    padding: 2.4rem;
+  }
+
+  .the-partner-list {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .the-partner-item {
+    width: calc((100% / 3) - 0.8rem);
+    height: unset;
+  }
+
+  .the-certifications {
+    display: block;
+  }
+
+  .the-certifications .label {
+    margin-bottom: 0.8rem;
+  }
+}

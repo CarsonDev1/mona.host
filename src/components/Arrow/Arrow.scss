@@ -1,0 +1,42 @@
+.arrow-down-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 4;
+  pointer-events: none;
+  margin: 1.6rem 0;
+}
+
+.arrow-down-ani {
+  width: 29.6rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes arrow-down-ani {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0, -1rem);
+    transform: translate(0, -1rem);
+  }
+
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      -webkit-transform: translate(0, 1rem);
+      transform: translate(0, 1rem);
+  }
+}
+
+.arrow-down-wrapper.active .arrow-down-ani {
+  animation: arrow-down-ani 1.4s linear infinite;
+}
+
+@media only screen and (max-width: 576px) {
+  .arrow-down-ani {
+    width: 15rem;
+  }
+}

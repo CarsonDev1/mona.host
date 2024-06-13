@@ -1,0 +1,166 @@
+
+@import "@/styles/core/mixin.scss";
+@import "@/styles/core/color.scss";
+
+.sec-customergrown-width {
+    width: calc(100% * (6.5 / 12));
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (max-width: 1200px) {
+        width: 60%;
+    }
+
+    @media (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.sec-customergrown {
+    .customergrown-content {
+        padding-bottom: 0;
+    }
+}
+
+.customergrown {
+    &-list {
+        --gap: 2.4rem;
+        align-items: stretch;
+        --productFeatureCardHoverDistance: -42px;
+        --productFeatureCardHoverDuration: 300ms;
+        --productFeatureCardHoverEasing: cubic-bezier(0.33,1,0.68,1);
+        margin-bottom: calc(var(--gap) * -1);
+    }
+
+    &-item {
+        margin-bottom: var(--gap);
+        width: 100%;
+        // &:nth-child(1) {
+        //     .wrap .content {
+        //         transform: translateY(70%);
+        //     }
+        // }
+
+        .wrap {
+            position: relative;
+            border-radius: 2.4rem;
+            overflow: hidden;
+            height: 100%;
+            padding-top: calc(100% * (333 / 450));
+            border: 0.1rem solid var(--Linear, #D5EEF6);
+
+            .img {
+                @include mid();
+                width: 100%;
+                height: 100%;
+
+                img {
+                    transition: transform var(--productFeatureCardHoverDuration) var(--productFeatureCardHoverEasing);
+                    will-change: transform;
+                }
+            }
+
+            .content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 1.6rem;
+                border-radius: 2.4rem;
+                border: 0.2rem solid var(--Linear, #D5EEF6);
+                background: var(--Card-bg, #FFF);
+                color: $textColor;
+
+                transition: transform var(--productFeatureCardHoverDuration) var(--productFeatureCardHoverEasing);
+                will-change: transform;
+                transform: translateY(100%);
+            }
+
+            .name {
+                font-size: 1.8rem;
+                font-weight: 600;
+                margin-bottom: 1.2rem;
+            }
+
+            .desc {
+                font-size: 1.4rem;
+                margin-bottom: 1.2rem;
+                @include lc(4)
+            }
+
+            &:hover {
+                &::before {
+                    opacity: 0;
+                }
+
+                .img img {
+                    transform: translateY(var(--productFeatureCardHoverDistance));
+                }
+
+                .content {
+                    transform: translateY(0);
+                }
+            }
+
+            @include max(1200px) {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 5.2rem;
+                    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#F9F9F9));
+                    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #F9F9F9);
+                    z-index: 1;
+                    pointer-events: none;
+                    transition: 0.3s;
+                }
+                .content {
+                    transform: translateY(48%);
+                }
+            }
+        }
+    }
+
+    &-content {
+        padding: 0.8rem;
+        mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 3%, #FFF 12.34%, #FFF 86.66%, rgba(255, 255, 255, 0) 97%);
+        -webkit-mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 3%, #FFF 12.34%, #FFF 86.66%, rgba(255, 255, 255, 0) 97%);
+        mask-size: 100% 100%;
+        -webkit-mask-size: 100% 100%;
+
+        .swiper-wrapper {
+            flex-direction: row !important;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
+          .swiper-slide {
+            font-size: 1.8rem;
+            height: calc((100% - 30px) / 2) !important;
+          
+            /* Center slide text vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+    }
+
+    @include max(1200px) {
+        &-list {
+            --gap: 1.6rem;
+        }
+    }
+
+    @include max(768px) {
+        &-list {
+            --gap: 0.8rem;
+        }
+    }
+}

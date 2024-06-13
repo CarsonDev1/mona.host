@@ -1,0 +1,17 @@
+.swiper.swiper-horizontal {
+  padding-bottom: 1.6rem;
+
+  .swiper-pagination {
+    bottom: 0rem;
+  }
+  
+  .swiper-pagination-bullet {
+    background: var(--bgDot);
+    box-shadow: var(--shadowDot);
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #1685FE;
+  }
+}

@@ -1,0 +1,93 @@
+canvas,
+svg {
+	display: block;
+	vertical-align: middle;
+}
+.toggle-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border-radius: 3rem;
+	overflow: hidden;
+	border: 1px solid rgb(228, 221, 221);
+	font-weight: 700;
+	justify-content: space-between;
+}
+
+.toggle-option {
+	text-align: center;
+	padding: 0.75rem;
+	cursor: pointer;
+	z-index: 1;
+	transition: color 0.3s;
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+	color: white;
+	width: 50%;
+	justify-content: center;
+}
+@media screen and (max-width: 1200px) {
+	.toggle-option {
+		padding: 0.55rem;
+	}
+}
+
+.toggle-option.active {
+	color: white;
+}
+
+.toggle-background {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+	transition: transform 0.3s ease;
+	z-index: 0;
+	border-radius: 3rem;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.banner-mask {
+	-webkit-mask-image: url('/domains/bg-banner-fm.png');
+	mask-image: url('/domains/bg-banner-fm.png');
+	-webkit-mask-size: 100%;
+	mask-size: 100%;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	z-index: 10;
+}
+.square {
+	width: 6rem;
+	height: 5rem;
+	background: linear-gradient(#6c47ff, #494713, #38dafd, #6248f6);
+	transform: rotate(90deg);
+	left: 53%;
+	position: absolute;
+	background-size: 200%;
+	animation: gradients 10s infinite;
+}
+
+@keyframes gradients {
+	0% {
+		transform: translate(0, 0) rotate(90deg);
+	}
+	25% {
+		transform: translate(-1rem, 15rem) rotate(90deg);
+	}
+	45% {
+		transform: translate(5rem, 16rem) rotate(131deg);
+	}
+	65% {
+		transform: translate(11rem, 14rem) rotate(138deg);
+	}
+	75% {
+		transform: translate(14rem, 11rem) rotate(90deg);
+	}
+	85% {
+		transform: translate(20rem, 7rem) rotate(139deg);
+	}
+	100% {
+		transform: translate(28rem, 6rem) rotate(90deg);
+	}
+}

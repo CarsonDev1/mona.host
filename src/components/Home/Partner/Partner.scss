@@ -1,0 +1,32 @@
+@media only screen and (max-width: 768px) {
+  .mover-slide-02 .img-slide {
+    width: 120px;
+  }
+}
+
+.sec-partner {
+  position: relative;
+
+  .sec-com-tt-sub {
+    margin-bottom: 3.2rem;
+  }
+
+  &-img {
+    height: 5.5rem;
+
+    @media (max-width: 825px) {
+      height: 3.8rem;
+    }
+
+    img {
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}
+
+[data-theme=dark] {
+  .sec-partner-img img {
+    filter: brightness(0) invert(1);
+  }
+}

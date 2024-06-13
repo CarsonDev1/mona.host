@@ -1,0 +1,126 @@
+@import "@/styles/core/mixin.scss";
+@import "@/styles/core/color.scss";
+
+.sec-question {
+	.sec-com-content {
+		padding-bottom: 2.4rem;
+
+    @media (max-width: 1200px) {
+      padding-left: 2.4rem;
+      padding-right: 2.4rem;
+    }
+
+    @media (max-width: 576px) {
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0.8rem;
+    }
+	}
+  
+  &-width {
+    width: calc(100% * (5 / 12));
+    margin-left: auto;
+    margin-right: auto;
+
+		@media (max-width: 1200px) {
+			width: 60%;
+		}
+
+		@media (max-width: 600px) {
+			width: 100%;
+		}
+  }
+
+  &-content {
+    padding: 0 4.8rem;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      padding: 0 2.4rem;
+    }
+
+    @media (max-width: 576px) {
+      padding: 0 1rem;
+    }
+  }
+
+  @include min(1201px) {
+    .sec-com-header {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.accordion-inside {
+  padding: 2.4rem 2rem;
+  border-radius: 1.4rem;
+  background-color: #fff;
+  position: relative;
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  .tt {
+    transition: 0.3s;
+  }
+
+  &:hover {
+    @include min(1201px) {
+      .tt {
+        color: $hostColor;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .accordion-inside {
+    padding: 1.6rem 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .accordion-inside {
+    padding: 1.2rem;
+  }
+}
+
+[data-theme=dark] {
+  .accordion-inside {
+    background-color: unset;
+
+    .sec-question-rect {
+      fill: #fff;
+    }
+
+    &[aria-expanded=true] {
+      // --darkmode-stroke: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 9%);
+      // --darkmode-stroke: linear-gradient(
+      //   to top, 
+      //   red, 
+      //   rgba(0, 0, 0, 0)
+      // ) 1 100%;
+  
+      /* mask-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); */
+      // border-radius: 1.4rem;
+      // border-width: 0.3rem;
+      // border-style: solid;
+      // border-image: var(--darkmode-stroke);
+  
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        right: 0;
+        width: 10.5rem;
+        height: 4.8rem;
+        -webkit-mask-image: url("/home/accordion-inside-active.png");
+        mask-image: url("/home/accordion-inside-active.png");
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+        background-color: #fff;
+      }
+    }
+  }
+}

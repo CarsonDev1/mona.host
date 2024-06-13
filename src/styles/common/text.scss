@@ -1,0 +1,86 @@
+.txt-media {
+  color: $mediaColor;
+}
+
+.txt-host {
+  color: $hostColor;
+}
+
+.txt-host-700 {
+  color: $hostColor700;
+}
+
+.txt-software {
+  color: $softwareColor;
+}
+
+.txt-edutech {
+  color: $edutechColor;
+}
+
+.txt-nhtq {
+  color: $nhtqColor;
+}
+
+.txt-white {
+  color: #fff;
+}
+
+.txt-hl {
+  background: var(--txtHl);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-media {
+  background-color: $mediaColor;
+}
+
+.bg-edutech {
+  background-color: $edutechColor;
+}
+
+.bg-host {
+  background-color: $hostColor;
+}
+
+.bg-host-50 {
+  background-color: $hostColor50;
+}
+
+.bg-host-700 {
+  background-color: $hostColor700;
+}
+
+.bg-software {
+  background-color: $softwareColor;
+}
+
+.bg-nhtq {
+  background-color: $nhtqColor;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.mg-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
