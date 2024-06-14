@@ -7,13 +7,15 @@ import './CartMini.scss';
 import { InformationProps, PlanDetails } from '@/types/PlanCardDetail';
 import AddedCartItems from '@/components/MiniCart/AddedCartItem';
 import SecurityItem from '@/components/MiniCart/SecurityItem';
+import { useQuery } from '@tanstack/react-query';
+import { getUpSell } from '@/app/api/hostings/getUpSell';
 
 interface SearchResult {
 	suffix: string;
 	name: string;
 	buy_price: number;
 	renew_price: number;
-	id: string;
+	_id: string;
 	product: string;
 	salePrice: number;
 	basePrice: number;
@@ -35,6 +37,8 @@ export const Cart: React.FC<Step1Props> = ({ onNextStep, handleNextStep }) => {
 	const [totalPrice, setTotalPrice] = useState<number>(0);
 	const [showMailItem, setShowMailItem] = useState<boolean>(false);
 	const [securityItemVisible, setSecurityItemVisible] = useState<boolean>(false);
+	const [priceMail, setPriceMail] = useState<number>(2000000);
+	const [optionID, setOptionID] = useState<string>('');
 
 	useEffect(() => {
 		const loadCartItems = () => {
@@ -55,7 +59,7 @@ export const Cart: React.FC<Step1Props> = ({ onNextStep, handleNextStep }) => {
 		};
 	}, []);
 
-	const updateTotalPrice = (items: SearchResult[]) => {
+	const updateTotalPrice = (items: SearchResult[], additionalPrice: number = 0) => {
 		const newTotalPrice = items.reduce((total, item) => {
 			const savedYears = localStorage.getItem(`selectedYears_${item.name}`);
 			const years = savedYears ? parseInt(savedYears, 10) : 1;
@@ -68,7 +72,7 @@ export const Cart: React.FC<Step1Props> = ({ onNextStep, handleNextStep }) => {
 				return total + item.renew_price * years;
 			}
 		}, 0);
-		setTotalPrice(newTotalPrice);
+		setTotalPrice(newTotalPrice + additionalPrice);
 	};
 
 	const handleClearCart = () => {
@@ -78,8 +82,8 @@ export const Cart: React.FC<Step1Props> = ({ onNextStep, handleNextStep }) => {
 		window.dispatchEvent(new Event('cartUpdated'));
 	};
 
-	const handleRemoveItemHosting = (optionName: string) => {
-		const updatedCartItems = cartItems.filter((item) => item.name !== optionName);
+	const handleRemoveItemHosting = (_id: string) => {
+		const updatedCartItems = cartItems.filter((item) => item._id !== _id);
 		setCartItems(updatedCartItems);
 		localStorage.setItem('cart', JSON.stringify(updatedCartItems));
 		updateTotalPrice(updatedCartItems);
@@ -95,7 +99,12 @@ export const Cart: React.FC<Step1Props> = ({ onNextStep, handleNextStep }) => {
 	};
 
 	const handlePriceChange = (name: string, newPrice: number) => {
-		updateTotalPrice(cartItems);
+		const updatedCartItems = cartItems.map((item) =>
+			item.name === name ? { ...item, salePrice: newPrice } : item
+		);
+		setCartItems(updatedCartItems);
+		localStorage.setItem('cart', JSON.stringify(updatedCartItems));
+		updateTotalPrice(updatedCartItems);
 	};
 
 	const handleShowMailItem = () => {
@@ -106,16 +115,10 @@ export const Cart: React.FC<Step1Props> = ({ onNextStep, handleNextStep }) => {
 		setSecurityItemVisible(!securityItemVisible);
 	};
 
-	const handleSSLPriceChange = (name: string, isChecked: boolean) => {
+	const handleSSLPriceChange = (isChecked: boolean) => {
 		const sslPrice = isChecked ? 2000000 : 0;
-		const updatedCartItems = cartItems.map((item) => {
-			if (item.name === name) {
-				return { ...item, sslPrice };
-			}
-			return item;
-		});
-		setCartItems(updatedCartItems);
-		updateTotalPrice(updatedCartItems);
+		updateTotalPrice(cartItems, sslPrice);
+		setPriceMail(sslPrice);
 	};
 
 	return (
@@ -138,6 +141,8 @@ export const Cart: React.FC<Step1Props> = ({ onNextStep, handleNextStep }) => {
 											handleRemoveItem={handleRemoveItem}
 											handleToggleMailItem={handleShowMailItem}
 											handleSSLPriceChange={handleSSLPriceChange}
+											priceMail={priceMail}
+											setPriceMail={setPriceMail}
 										/>
 									</div>
 								)

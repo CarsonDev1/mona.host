@@ -16,6 +16,8 @@ interface CartItemProps {
 	handleRemoveItem: (name: string) => void;
 	handleToggleMailItem: () => void;
 	handleSSLPriceChange: any;
+	priceMail: any;
+	setPriceMail: any;
 }
 
 export const CartItem: React.FC<CartItemProps> = ({
@@ -24,6 +26,8 @@ export const CartItem: React.FC<CartItemProps> = ({
 	handleRemoveItem,
 	handleToggleMailItem,
 	handleSSLPriceChange,
+	priceMail,
+	setPriceMail,
 }) => {
 	const notifySuccess = () =>
 		toast.info(`Đã cập nhật thời hạn tên miền`, {
@@ -71,8 +75,6 @@ export const CartItem: React.FC<CartItemProps> = ({
 		setShowMailItem((prev) => !prev);
 	};
 
-	const priceMail = 2000000;
-
 	return (
 		<div className='w-full'>
 			<CartItemDetail
@@ -85,6 +87,7 @@ export const CartItem: React.FC<CartItemProps> = ({
 				toggleMailItem={toggleMailItem}
 				priceMail={priceMail}
 				handleSSLPriceChange={handleSSLPriceChange}
+				setPriceMail={setPriceMail}
 			/>
 		</div>
 	);

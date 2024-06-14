@@ -12,7 +12,7 @@ export interface InformationProps {
 }
 
 export interface PlanDetails {
-  id: string;
+  _id: string;
   product: string;
   name: string;
   salePrice: number;

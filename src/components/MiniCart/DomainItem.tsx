@@ -95,6 +95,7 @@ const CartItemDetail = ({
 	toggleMailItem,
 	priceMail,
 	handleSSLPriceChange,
+	setPriceMail,
 }: {
 	searchResult: SearchResult;
 	selectedYears: number;
@@ -105,7 +106,16 @@ const CartItemDetail = ({
 	toggleMailItem: () => void;
 	priceMail: number;
 	handleSSLPriceChange: (isChecked: boolean) => void;
+	setPriceMail: any;
 }) => {
+	const [isSSLEnabled, setIsSSLEnabled] = useState(false);
+
+	const handleSSLChange = (event: React.SyntheticEvent, checked: boolean) => {
+		handleSSLPriceChange(checked);
+		setIsSSLEnabled(checked);
+		setPriceMail(checked ? priceMail + 2000000 : priceMail - 2000000);
+	};
+
 	return (
 		<ThemeProvider theme={theme}>
 			<div
@@ -157,7 +167,9 @@ const CartItemDetail = ({
 						<div className='flex items-center justify-between mt-4'>
 							<div className='flex items-center'>
 								<FormControlLabel
-									control={<IOSSwitch sx={{ m: 1 }} />}
+									control={
+										<IOSSwitch sx={{ m: 1 }} checked={isSSLEnabled} onChange={handleSSLChange} />
+									}
 									label='Bảo vệ tên miền với SSL'
 									sx={{ fontSize: '1.8rem', fontWeight: 'bold' }}
 								/>
@@ -165,9 +177,7 @@ const CartItemDetail = ({
 									ĐƯỢC KHUYÊN DÙNG
 								</span>
 							</div>
-							<span className='text-2xl text-sky-400 font-semibold'>
-								{priceMail.toLocaleString()}đ/năm
-							</span>
+							<span className='text-2xl text-sky-400 font-semibold'>2,000,000đ/năm</span>
 						</div>
 						<ul className='pl-12 list-disc text-xl'>
 							<li>Domain SSL là xác minh quyền sở hữu Domain Name.</li>

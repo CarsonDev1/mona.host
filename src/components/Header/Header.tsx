@@ -44,60 +44,47 @@ function Header() {
 
 	const { sessionToken } = useAppContext();
 
-	useEffect(() => {
-		const fetchRequest = async () => {
-			try {
-				const response = await fetch(`${envConfig.NEXT_PUBLIC_API_ENDPOINT}/users/me`, {
-					headers: {
-						'Content-Type': 'application/json',
-						Authorization: `Bearer ${sessionToken}`,
-					},
-				});
-
-				const payload = await response.json();
-				const data = {
-					status: response.status,
-					payload,
-				};
-
-				if (!response.ok) {
-					throw data;
-				}
-
-				setUserData(data.payload);
-				localStorage.setItem('userData', JSON.stringify(data.payload));
-			} catch (err) {
-				console.error('Error fetching user data:', err);
-			}
-		};
-
-		const storedData = localStorage.getItem('userData');
-		if (storedData) {
-			try {
-				const parsedData = JSON.parse(storedData);
-				setUserData(parsedData);
-			} catch (parseError) {
-				console.error('Error parsing stored data:', parseError);
-				localStorage.removeItem('userData');
-				fetchRequest();
-			}
-		} else {
-			fetchRequest();
-		}
-	}, [sessionToken]);
-	// const getMeQuery = useQuery({
-	// 	queryKey: ['getMe'],
-	// 	queryFn: getMe,
-	// 	enabled: true,
-	// });
-
 	// useEffect(() => {
-	// 	const token = localStorage.getItem('token');
-	// 	if (token) {
-	// 		getMeQuery.refetch();
-	// 	}
+	// 	const fetchRequest = async () => {
+	// 		try {
+	// 			const response = await fetch(`${envConfig.NEXT_PUBLIC_API_ENDPOINT}/users/me`, {
+	// 				headers: {
+	// 					'Content-Type': 'application/json',
+	// 					Authorization: `Bearer ${sessionToken}`,
+	// 				},
+	// 			});
 
-	// }, [getMeQuery]);
+	// 			const payload = await response.json();
+	// 			const data = {
+	// 				status: response.status,
+	// 				payload,
+	// 			};
+
+	// 			if (!response.ok) {
+	// 				throw data;
+	// 			}
+
+	// 			setUserData(data.payload);
+	// 			localStorage.setItem('userData', JSON.stringify(data.payload));
+	// 		} catch (err) {
+	// 			console.error('Error fetching user data:', err);
+	// 		}
+	// 	};
+
+	// 	const storedData = localStorage.getItem('userData');
+	// 	if (storedData) {
+	// 		try {
+	// 			const parsedData = JSON.parse(storedData);
+	// 			setUserData(parsedData);
+	// 		} catch (parseError) {
+	// 			console.error('Error parsing stored data:', parseError);
+	// 			localStorage.removeItem('userData');
+	// 			fetchRequest();
+	// 		}
+	// 	} else {
+	// 		fetchRequest();
+	// 	}
+	// }, [sessionToken]);
 
 	const handleMenuToggle = () => setMenuOpen(!menuOpen);
 	const handleCartToggle = () => setCartOpen(!cartOpen);

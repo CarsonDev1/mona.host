@@ -68,7 +68,7 @@ const Plan = () => {
 				) : (
 					filteredData.map((planDetails) => (
 						<PlanCard
-							key={planDetails.id}
+							key={planDetails._id}
 							planDetails={planDetails}
 							isLoading={false}
 							duration={selectedDuration}
